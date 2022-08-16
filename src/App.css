@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  background-color: #b1ebed;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.progress-bar {
+  display: block;
+  height: 10px;
+  position: fixed;
+  z-index: 50;
+  background-color: hsl(345deg 100% 47%);
+  background-repeat: no-repeat;
+  transition: all 1s linear;
+}
+
+.horizontal_top {
+  top: 0;
+  left: 0;
+  width: var(--progress_bar);
+}
+
+.horizontal_bottom {
+  bottom: 0;
+  right: 0;
+  background-color: hsl(345deg 100% 47%);
+  width: var(--progress_bar);
+}
+
+.vertical_left {
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: var(--progress_bar);
+  background-color: hsl(345deg 100% 47%);
+}
+
+.vertical_right {
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: var(--progress_bar);
+  background-color: hsl(345deg 100% 47%);
+}
+
+.clock {
+  height: 100%;
+  font-size: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.clock__session_time__title,
+.clock__break_time__title {
+  font-size: 50px;
+}
+
+.clock__title {
+  margin-top: 1%;
+  font-size: 72px;
+}
+
+.clock__display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.clock__display_title {
+  font-size: 50px;
+}
+
+.clock__display_time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 7%;
+  font-size: 50px;
+  min-width: 60px;
+}
+
+.clock__break_session_time {
+  font-size: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  row-gap: 0;
+  min-width: 300px;
+}
+
+
+.clock__time_ratio {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  padding-bottom: 2%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.clock__display_time{
+  padding-bottom: 0;
+}
+
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to left,
+      hsl(340deg 100% 16%) 0%,
+      hsl(340deg 100% 32%) 8%,
+      hsl(340deg 100% 32%) 92%,
+      hsl(340deg 100% 16%) 100%);
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .horizontal_bottom,
+  .horizontal_top {
+    height: 5px;
+  }
+
+  .vertical_left,
+  .vertical_right {
+    width: 5px;
+  }
+
+  .clock__title {
+    font-size: 3rem;
+  }
+
+  .clock__break_time__title,
+  .clock__session_time__title {
+    font-size: 36px;
+  }
+  .clock__display_time{
+    font-size: 2.5rem;
+  }
+  .clock__time_ratio{
+    flex-direction: column;
+    gap: 0;
+  }
+  .clock__display_title{
+    font-size: 40px;
+  }
+}
