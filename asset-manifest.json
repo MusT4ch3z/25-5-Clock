@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/25-5-Clock/static/css/main.a209317d.css",
+    "main.js": "/25-5-Clock/static/js/main.a392badb.js",
+    "static/media/alarm.wav": "/25-5-Clock/static/media/alarm.9e82fa7a439d320a64a1.wav",
+    "index.html": "/25-5-Clock/index.html",
+    "main.a209317d.css.map": "/25-5-Clock/static/css/main.a209317d.css.map",
+    "main.a392badb.js.map": "/25-5-Clock/static/js/main.a392badb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a209317d.css",
+    "static/js/main.a392badb.js"
+  ]
+}
